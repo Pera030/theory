@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400&display=swap');
+
+:root {
+    --blue: #5385c1;
+    --white: #fff;
+    --gray: #9a9a9a;
+    --lightgray: lightgray;
+    --padding: 100px 0; 
+}
+
+/****************
+Basic styles
+****************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--gray);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 100;
+}
+
+button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: var(--gray);
+    transition: .4s ease;
+}
+
+/****************
+Header
+****************/
+
+header {
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 7px solid var(--blue);
+}
+
+header nav {
+    padding-top: 40px;
+}
+
+header nav .logo {
+    float: left;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+header nav ul {
+    float: right;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 70px;
+}
+
+header hgroup {
+    text-align: center;
+    color: var(--white);
+    padding: 150px 0;
+}
+
+header hgroup h1 {
+    font-size: 4rem;
+    padding-bottom: 40px;
+}
+
+header hgroup h5 {
+    font-size: 1.2rem;
+    color: var(--lightgray);
+}
+
+/****************
+Intro
+****************/
+
+.intro {
+    padding: var(--padding);
+}
+
+.intro article {
+    width: 33%;
+    float: left;
+    padding: 50px;
+    text-align: center;
+    border-right: 1px solid var(--gray);
+}
+
+.intro article:nth-child(3) {
+    border-right: none;
+}
+
+.intro article h3 {
+    color: var(--blue);
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+.intro article p {
+    line-height: 1.7;
+    padding-bottom: 30px;
+}
+
+/****************
+Team
+****************/
+.team {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: var(--padding);
+}
+
+.team h2 {
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+.team p {
+    padding-bottom: 50px;
+}
+
+.team article {
+    float: left;
+    width: 25%;
+}
+
+.team article .wrapper {
+    border:1px solid var(--white);
+    margin: 20px;
+    padding: 30px 30px 0 30px;
+}
+
+.team article .wrapper img {
+    border-radius: 50%;
+    width: 70%;
+}
+
+.team article .wrapper h4 {
+    padding: 20px 0;
+    font-size: 1.3rem;
+}
+
+.team article .wrapper p {
+    font-size: 1.1rem;
+    color: var(--lightgray);
+}
+
+/****************
+Blog
+****************/
+
+.blog {
+    padding: var(--padding);
+    text-align: center;
+}
+
+.blog h2 {
+    color: var(--blue);
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+.blog p {
+    padding-bottom: 50px;
+}
+
+.blog article {
+    width: 50%;
+    float: left;
+    text-align: left;
+    padding: 30px;
+}
+
+.blog article img {
+    width: 100%;
+    height: auto;
+}
+
+.blog article h2 {
+    font-size: 2rem;
+    padding: 30px 0;
+}
+
+.blog article p {
+    line-height: 1.7;
+    padding-bottom: 40px;
+    text-align: justify;
+}
+
+/****************
+Footer
+****************/
+footer {
+    border-top: 1px solid var(--lightgray);
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer a {
+    font-size: 2.5rem;
+    margin: 0 30px;
+    color: var(--blue);
+}
+
+footer a:hover {
+    color: var(--gray);
+    transition: .4s ease;
+}
+
+
+
+/****************
+Responsive
+****************/
+@media(max-width:768px) {
+    
+    .container {
+        width: 90%;
+    }
+    
+    header nav .logo {
+        float: none;
+        display: block;
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: 3rem;
+    }
+
+    header nav ul {
+        display: block;
+        float: none;
+    }
+    
+    header nav ul li a {
+        margin-left: 50px;
+        font-size: 1.2rem;
+    }
+    
+    header hgroup {
+        padding: 100px 0;
+    }
+
+    header hgroup h1 {
+        font-size: 3.5rem;
+    }
+    
+    .intro article {
+        width: 100%;
+        border-right: none;
+        padding: 0 0 40px 0;
+        text-align: center;
+    }
+
+    .intro article:last-child {
+        padding: 0;
+    }
+    
+    .team article {
+        width: 100%;
+    }
+    
+    .team h2 + p {
+        padding: 0 40px 30px 40px;
+    }
+    
+    .blog h2+p {
+        padding: 10px;
+    }
+    
+    .blog article {
+        width: 100%;
+    }
+    
+    .blog article p {
+        padding: 0px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
